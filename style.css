@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+/* #cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(142, 187, 18);
+  position: fixed;
+  z-index: 99;
+} */
+/* #cursor-blur {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: rgb(111, 142, 27);
+  position: fixed;
+  filter: blur(150px);
+  z-index: 9;
+} */
+#nav {
+  height: 150px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  padding: 0 150px;
+  justify-content: flex-start;
+  gap: 90px;
+  position: fixed;
+  z-index: 99;
+}
+#nav img {
+  height: 80px;
+}
+#nav h4 {
+  text-transform: uppercase;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* PAGE 1 CSS */
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+#page1 h1 {
+  font-size: 140px;
+  font-weight: 900;
+  position: relative;
+}
+#page1 h1:before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: #000;
+  top: -6px;
+  left: -4px;
+  -webkit-text-stroke: 2px rgb(150, 193, 32);
+  z-index: -1;
+}
+#page1 h2 {
+  font-size: 30px;
+  font-weight: 800;
+}
+#page1 p {
+  font-size: 15px;
+  font-weight: 500;
+  width: 50%;
+}
+
+/* PAGE 2 CSS */
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Infinite scroller accha wala */
+#scroller {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-timing-function: linear;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: transparent; */
+  color: black;
+  margin-right: 10px;
+  transform: all linear 0.5s;
+  /* -webkit-text-stroke: 2px rgb(150, 193, 32); */
+  -webkit-text-stroke: 2px white;
+}
+#scroller h4:hover {
+  color: rgb(150, 193, 32);
+  transition: all ease 0.6s;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* About Us */
+#aboutUs {
+  display: flex;
+
+  padding: 60px;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+}
+#aboutUs img {
+  height: 200px;
+  width: 200px;
+}
+#aboutUs h3 {
+  padding-bottom: 60px;
+  font-size: 40px;
+}
+#content {
+  display: block;
+  text-align: center;
+  padding: 40px;
+  margin: 40px;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+/* PAGE 3 CSS */
+#page3 {
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+#card-container {
+  /* background-color: red; */
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 100%;
+  width: 24%;
+  /* background-color: blue; */
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+#card1 {
+  background-image: url(./assets/asset\ 4.webp);
+}
+#card2 {
+  background-image: url(./assets/asset\ 5.webp);
+}
+#card3 {
+  background-image: url(./assets/asset\ 6.webp);
+}
+
+.overlay {
+  min-height: 100vh;
+  opacity: 0;
+  width: 100%;
+  background-color: rgb(150, 193, 32);
+  padding: 40px;
+  transition: all ease 0.6s;
+  position: relative;
+  top: -45%;
+}
+.overlay a{
+  text-decoration: none;
+}
+.overlay h4 {
+  font-size: 40px;
+  margin-top: 40px;
+  color: black;
+  text-transform: uppercase;
+}
+.overlay p {
+  color: #000;
+  font-size: 20px;
+  font: bold;
+  line-height: 30px;
+  margin-block: 20px;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* 3d rotation  */
+.card:hover {
+  transform: rotate3d(1, 1, 0, 20deg);
+}
+.card h3 {
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  padding: 20px;
+  top: 50%;
+  font-size: 50px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.card:hover h3 {
+  opacity: 0;
+}
