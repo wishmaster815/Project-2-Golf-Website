@@ -84,13 +84,15 @@ video {
   z-index: -1;
 }
 #page1 h2 {
+  margin-block:  20px;
   font-size: 30px;
   font-weight: 800;
 }
 #page1 p {
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 500;
-  width: 50%;
+  width: 60%;
+  padding: 20px;
 }
 
 /* PAGE 2 CSS */
